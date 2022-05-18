@@ -3,6 +3,8 @@ body, input {
         }
 
         body {
+            /* display: flex; */
+            padding-top: 60px;
             text-align: center;
             background-color: #828E82;
         }

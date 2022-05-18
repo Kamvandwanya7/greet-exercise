@@ -13,11 +13,12 @@ namesGreetedCount.innerHTML = names.length;
 function greetPeople() {
     var languageSelection = document.querySelector("input[name='theLanguage']:checked");
 
-    var name = myTextElement.value.toLowerCase();
+    var name = myTextElement.value.toUpperCase();
 
     //storing names
     if (name !== "") {
-
+    //  if(name[i].includes(names[i]))
+    
         names.push(name);
     }
 

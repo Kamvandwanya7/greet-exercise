@@ -32,6 +32,7 @@ function greetPeople() {
         } else {
             message.innerHTML = greetFunction.regexFail(nameText);
             nameText.value = "";
+            message.classList.add("red");
         }
     }
     else {

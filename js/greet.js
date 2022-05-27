@@ -7,7 +7,6 @@ let alphabetRegex = /[a-z]$/gi;
 
 var names = [];
 
-
 if (localStorage['names']) {
     names = JSON.parse(localStorage.getItem('names'))
 }
@@ -27,7 +26,7 @@ function greetPeople() {
             message.classList.remove("red");
             localStorage.setItem("names", JSON.stringify(greetFunction.getNames()))
 
-            //    storeNames(nameText)
+    //    storeNames(nameText)
         } else {
             message.innerHTML = greetFunction.regexFail(nameText);
             nameText.value = "";

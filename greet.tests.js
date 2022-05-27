@@ -62,7 +62,6 @@ describe('Error messages', function () {
         var grt = greetName.errorMessage("", null);
         assert.equal("Please enter your name and select the language!", grt)
 
-        // assert.equal("Please enter your name and select the language", greetName.greetMessage('kamva', null));
     });
 
     it('It should be able to return error message when language is not included', function () {

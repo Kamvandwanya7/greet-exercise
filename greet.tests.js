@@ -53,7 +53,6 @@ describe('Different languages', function () {
         var grt = greetName.greetMessage("Azo", "isixhosa");
         assert.equal("Molo Azo", grt)
 
-        // assert.equal("Please enter your name and select the language", greetName.greetMessage('kamva', null));
     });
 });
 describe('Error messages', function () {

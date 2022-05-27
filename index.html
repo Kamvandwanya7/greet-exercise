@@ -11,46 +11,42 @@
 </head>
 
 <body>
- <center>
-    <h2>Greeting</h2>
- </center>
+    <div class="glass">
+        <center>
+            <h2>Greeting</h2>
+        </center>
 
-<article class="article">
-    <label>Name:</label>
-    <input placeholder="Type your full name here" type="text" class="myText"><br><br>
-    <div>
-        <input type="radio" name="theLanguage" class="language" value="english">
-        <label>English</label>
-        <!-- </div>
-
-    <div> -->
-        <input type="radio" name="theLanguage" class="language" value="isixhosa">
-        <label>IsiXhosa</label>
-        <!-- </div>
+        <label>Name:</label>
+        <input placeholder="Type your full name here" type="text" class="myText"><br><br>
+        <div>
+            <input type="radio" name="theLanguage" class="language" value="english">
+            <label>English</label>
+            <!-- </div>
 
     <div> -->
-        <input type="radio" name="theLanguage" class="language" value="afrikaans">
-        <label>Afrikaans</label>
+            <input type="radio" name="theLanguage" class="language" value="isixhosa">
+            <label>IsiXhosa</label>
+            <!-- </div>
+
+    <div> -->
+            <input type="radio" name="theLanguage" class="language" value="afrikaans">
+            <label>Afrikaans</label>
+        </div><br>
+
+        <button type="button" class="myButton">Greet me</button><br><br>
+
+        <div class="namesGreetedCounter">0</div>
+
+        <fieldset class="output">
+            <legend></legend>
+            <h4 class="message"></h4>
+        </fieldset>
+  
+        <button class="reset" value="">Reset</button>
+       
+      <script src="./greeting-fact.js" charset="utf-8"></script>
+        <script src="./js/greet.js" charset="utf-8"></script>
     </div>
-
-    <button type="button" class="myButton">Greet me</button>
-    <h4 class="message"> </h4>
-    <!-- <input class="message" type="text"> -->
-    <p class="output" ></p>
-    <div class="namesGreetedCounter">0</div>
-</article>
-     <!-- <div>
-         <button class="plus">+</button>
-         <button class="minus">-</button>
-     </div> -->
-     <!-- <button class="reset">Reset</button> -->
-    <!-- <button>Names Greeted</button> -->
-
-    <!-- <script type="text/javascript">
-        localStorage['greeted']= names
-    </script> -->
-
-    <script src="./js/greet.js" charset="utf-8"></script>
 </body>
 
 </html>

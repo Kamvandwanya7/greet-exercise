@@ -1,47 +1,99 @@
-body, input {
-            font-size: 20px;
+/* body, input {
+            font-size: 17px;
         }
 
         body {
-            /* display: flex; */
+            display: flex; 
             padding-top: 60px;
             text-align: center;
             background-color: #828E82;
-        }
+} */
 
+/* .container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 40px 50px;
+    padding-top: 60px;
+    text-align: center;
+    background-color: #828E82;
 
-.myButton{
+} */
+body {
+    background-color: #94aab3;
+}
+
+.glass {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    /* padding: 40px 50px; */
+    /* padding-top: 60px; */
+    background-image: url(./image/istockphoto-1220429168-612x612.jpg);
+    text-align: center;
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+input {
+    font-size: 17px;
+}
+
+.myButton {
     background-color: #E0E0E0;
     padding: 10px 10px;
-    /* color: white; */
-    font-size: 20px;
+    /* color: white;  */
+    font-size: 17px;
     border-radius: 10px;
 }
-h3{
-    /* color: blueviolet; */
-}
 
-h2{
+h2 {
     border: 2px solid black;
-    background-color: #AAAE8E;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    background-color: #9aa9bb;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 2px;
 
     padding: 10px;
     width: 30%;
     display: flex;
-    /* text-align: center; */
+    text-align: center;
     justify-content: center;
 }
-.namesGreetedCounter{
+
+.namesGreetedCounter {
     color: #3A606E;
     font-size: 24px;
     text-underline-position: below;
 }
-.reset{
-    background-color: #E0E0E0;
+
+.reset {
+    background-color: #94aab3;
     padding: 10px 10px;
-    /* color: white; */
-    font-size: 20px;
+    /* color: white;  */
+    font-size: 17px;
     border-radius: 10px;
+}
+
+.output {
+    background-color: #6c7b81;
+}
+
+.red {
+    color: crimson;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.black {
+    color: #000;
+}
+
+@media(max-width: 780px) {
+    .glass {
+        flex-direction: column;
+    }
 }

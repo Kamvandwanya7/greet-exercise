@@ -1,38 +1,84 @@
-var nameCount=0
-
-
 function GreetingFact() {
     var greetedNames = [];
+    // alreadyExistingName || 
+    let alphabetRegex = /[a-z]$/gi;
+    let theError= "";
+
 
     function setNames(name) {
-        greetedNames.push(name)
+        if (!greetedNames.includes(name)) {
+            greetedNames.push(name)
+        }
     }
-    function getNames(){
+
+    function setRed(red){
+     theError= "red";
+    }
+    function getRed(){
+        return theError;
+    }
+
+    function getNames() {
         return greetedNames;
     }
 
-    function setCount(nameCount){
-        return nameCount;
+
+    function getCount() {
+        return greetedNames.length;
     }
 
-    function greetMessageEnglish(name, language) {
-        if (language = "english")
-            message = "Hello " + name;
+    function regexPass(name) {
+        return alphabetRegex.test(name)
     }
-    function greetMessageIsixhosa(name, language) {
-        if (language = "isixhosa")
-            message = "Mholo " + name;
+
+    function regexFail(name) {
+        if (!regexPass(name)) {
+            return "Your name is not recognized!";
+        }
     }
-    function greetMessageAfrikaans(name, language) {
-        if (language = "afrikaans")
-            message = "Hallo " + name;
+
+    function greetMessage(name, language) {
+        if (name && language) {
+            setNames(name)
+            if (language === "english") {
+                return "Hello " + name;
+            }
+            if (language === "isixhosa") {
+                return "Molo " + name;
+            }
+            if (language === "afrikaans") {
+                return "Hallo " + name;
+            }
+        }
     }
+    function errorMessage(name, language) {
+            if (name == '' && language === null) {
+                return "Please enter your name and select the language!";
+            }
+    }
+    function errorLang(name, language) {
+            if (name !== '' && language === null) {
+                return "Hi " + name + " please select the language!";
+            }
+    }
+    function errorName(name) {
+            if (name == '') {
+                return "Please enter your name!";
+            }
+    }
+
     return {
         setNames,
         getNames,
-        setCount,
-        greetMessageEnglish,
-        greetMessageIsixhosa,
-        greetMessageAfrikaans,
+        getCount,
+        greetMessage,
+        regexPass,
+        regexFail,
+        errorMessage,
+        errorLang,
+        errorName,
+        getRed,
+        setRed,
     }
 }
+

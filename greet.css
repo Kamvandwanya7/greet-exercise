@@ -92,8 +92,8 @@ h2 {
     color: #000;
 }
 
-@media(max-width: 780px) {
+/* @media(max-width: 780px) {
     .glass {
         flex-direction: column;
     }
-}
+} */

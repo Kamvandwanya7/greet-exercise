@@ -20,7 +20,6 @@ function greetPeople() {
     var name = myTextElement.value;
     var nameText = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
-    // document.querySelector(".myText").innerHTML= greetFunction.greetMessage(nameText.value)
     //greeting names
     if (nameText !== "" && languageSelection) {
         if (greetFunction.regexPass(nameText)) {

@@ -25,15 +25,15 @@ function greetPeople() {
         if (greetFunction.regexPass(nameText)) {
             message.innerHTML = greetFunction.setNames(nameText)
 
-            message.innerHTML = greetFunction.greetMessage(nameText, languageSelection.value)
-            message.classList.remove("red");
-            localStorage.setItem("names", JSON.stringify(greetFunction.getNames()))
-            //    storeNames(nameText)
         } else {
             message.innerHTML = "Enter a valid name";
             message.classList.add("red");
             myTextElement.value = "";
         }
+            message.innerHTML = greetFunction.greetMessage(nameText, languageSelection.value)
+            message.classList.remove("red");
+            localStorage.setItem("names", JSON.stringify(greetFunction.getNames()))
+            //    storeNames(nameText)
     }
     else {
         if (nameText == '' && languageSelection === null) {

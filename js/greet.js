@@ -27,13 +27,10 @@ function greetPeople() {
 
             message.innerHTML = greetFunction.greetMessage(nameText, languageSelection.value)
             message.classList.remove("red");
-            //  myTextElement.value= '';
-            // console.log(greetFunction.getNames())
             localStorage.setItem("names", JSON.stringify(greetFunction.getNames()))
             //    storeNames(nameText)
         } else {
-            // greetFunction.regexPass(nameText)
-            message.innerHTML = greetFunction.regexPass(nameText);
+            message.innerHTML = "Enter a valid name";
             message.classList.add("red");
             myTextElement.value = "";
         }
@@ -51,6 +48,7 @@ function greetPeople() {
             message.innerHTML = greetFunction.errorLang(nameText, languageSelection);
             message.classList.add("red");
             myTextElement.value = '';
+            console.log(languageSelection)
         }
     }
     function greetMe() {

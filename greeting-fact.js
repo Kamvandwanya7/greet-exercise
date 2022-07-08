@@ -33,13 +33,17 @@ function GreetingFact(name) {
     }
 
     function regexPass(name) {
-        if (alphabetRegex.test(name)) {
-            return true
+   return alphabetRegex.test(name)
         }
-        else {
-            return "Your name is not recognized!";
-        }
-    }
+
+        // function validatingName(name){
+
+        // }
+        // }
+        // else if(!alphabetRegex.test(name)){
+        //     return "Your name is not recognized!";
+        // }
+    
 
 
     // function regexFail(name) {

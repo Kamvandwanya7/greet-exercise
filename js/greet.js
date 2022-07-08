@@ -3,13 +3,14 @@ let myTextElement = document.querySelector('.myText');
 var message = document.querySelector(".message");
 var namesGreetedCount = document.querySelector(".namesGreetedCounter")
 var resetButton = document.querySelector(".reset")
-let alphabetRegex = /[a-z]$/gi;
+//let alphabetRegex = /^[a-z]+$/gi;
 
 var names = [];
 
 if (localStorage['names']) {
     names = JSON.parse(localStorage.getItem('names'))
 }
+
 let greetFunction = GreetingFact(names);
 
 namesGreetedCount.innerHTML = greetFunction.getCount();
@@ -22,32 +23,40 @@ function greetPeople() {
     //greeting names
     if (nameText !== "" && languageSelection) {
         if (greetFunction.regexPass(nameText)) {
+            message.innerHTML = greetFunction.setNames(nameText)
+
             message.innerHTML = greetFunction.greetMessage(nameText, languageSelection.value)
             message.classList.remove("red");
+            //  myTextElement.value= '';
+            // console.log(greetFunction.getNames())
             localStorage.setItem("names", JSON.stringify(greetFunction.getNames()))
-
-    //    storeNames(nameText)
+            //    storeNames(nameText)
         } else {
-            message.innerHTML = greetFunction.regexFail(nameText);
-            nameText.value = "";
+            // greetFunction.regexPass(nameText)
+            message.innerHTML = greetFunction.regexPass(nameText);
             message.classList.add("red");
+            myTextElement.value = "";
         }
     }
     else {
-        if (nameText == '') {
-            message.innerHTML = greetFunction.errorName(nameText);
-            message.classList.add("red");
-        }
         if (nameText == '' && languageSelection === null) {
             message.innerHTML = greetFunction.errorMessage(nameText, languageSelection);
-            // message.classList.add("red");
-        }
-        if (nameText !== '' && languageSelection === null) {
-            message.innerHTML = greetFunction.errorLang(nameText, languageSelection);
             myTextElement.value = '';
             message.classList.add("red");
+        } else if (nameText == '') {
+            message.innerHTML = greetFunction.errorName(nameText);
+            message.classList.add("red");
+            // setTimeout(errorName, '3000')
+        } else if (nameText !== '' && languageSelection === null) {
+            message.innerHTML = greetFunction.errorLang(nameText, languageSelection);
+            message.classList.add("red");
+            myTextElement.value = '';
         }
     }
+    function greetMe() {
+        message.innerHTML = '';
+    }
+    setTimeout(greetMe, 2000);
     namesGreetedCount.innerHTML = greetFunction.getCount();
 }
 
